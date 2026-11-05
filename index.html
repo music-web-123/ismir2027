@@ -51,10 +51,10 @@
     .highlight strong{font-size:1.23rem;letter-spacing:-.025em;}.highlight span{display:block;color:#52616b;margin-top:4px;}
     .status{border:1px solid #7ab19c;border-radius:100px;padding:8px 16px;font-size:.77rem;letter-spacing:.07em;text-transform:uppercase;font-weight:850;color:#235748;white-space:nowrap;}
     .section-alt{background:#fff;}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:38px;}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin-top:38px;}
     .card{min-height:205px;border:1px solid var(--line);border-radius:7px;padding:29px;background:#fff;display:flex;flex-direction:column;}
     .card .num{font-weight:850;color:#b6c2c0;font-size:.8rem;margin-bottom:35px;letter-spacing:.1em;}
-    .card h3{margin:0 0 9px;font-size:1.2rem;letter-spacing:-.03em;}.card p{margin:0;color:#71808a;font-size:.96rem;}
+    .card h3{margin:0 0 9px;font-size:1.2rem;letter-spacing:-.03em;}.card p{margin:0;color:#71808a;font-size:.96rem;}.date-lines{display:grid;gap:8px;margin-top:5px}.date-line{display:flex;justify-content:space-between;gap:15px;align-items:baseline;color:#52616b;font-size:.95rem}.date-line strong{color:var(--ink);font-weight:750;white-space:nowrap}.date-note{font-size:.88rem;color:#687983;margin-top:18px}
     .note{color:#6d7b82;font-size:.89rem;margin-top:18px;}
     .update-panel{border-radius:9px;background:var(--navy);color:#fff;padding:54px 60px;display:grid;grid-template-columns:1fr auto;gap:35px;align-items:center;}
     .update-panel h2{font-size:clamp(2rem,3.2vw,3rem);margin:0 0 12px;}.update-panel p{color:#cbd5d8;margin:0;max-width:650px;}
@@ -63,7 +63,7 @@
     .footer-grid{display:flex;justify-content:space-between;gap:30px;align-items:center;flex-wrap:wrap;}
     .footer-grid p{margin:5px 0;font-size:.85rem;}.footer-links{display:flex;gap:24px;flex-wrap:wrap;font-size:.88rem;}.footer-links a{color:#d7f5e9;text-underline-offset:4px;}
     .smallprint{font-size:.76rem!important;color:#95a4ac;}
-    @media(max-width:800px){.nav{height:88px}.brand-logo{width:123px;max-height:71px}.navlinks{gap:14px}.navlinks a:not(.nav-pill){display:none}.hero-inner{min-height:620px;padding:75px 0 90px}.hero-art{position:relative;right:auto;bottom:auto;width:min(72%,320px);margin:36px auto 0;display:block}.hero-copy{max-width:100%}.intro-grid{grid-template-columns:1fr;gap:5px}.cards{grid-template-columns:1fr}.card{min-height:160px}.card .num{margin-bottom:18px}.update-panel{padding:35px;grid-template-columns:1fr}.highlight-inner{align-items:flex-start;flex-direction:column;gap:14px}section{padding:70px 0}}
+    @media(max-width:800px){.nav{height:88px}.brand-logo{width:123px;max-height:71px}.navlinks{gap:14px}.navlinks a:not(.nav-pill){display:none}.hero-inner{min-height:620px;padding:75px 0 90px}.hero-art{position:relative;right:auto;bottom:auto;width:min(72%,320px);margin:36px auto 0;display:block}.hero-copy{max-width:100%}.intro-grid{grid-template-columns:1fr;gap:5px}.cards{grid-template-columns:1fr}.card{min-height:160px}.card .num{margin-bottom:18px}.date-line{flex-wrap:wrap;gap:2px}.update-panel{padding:35px;grid-template-columns:1fr}.highlight-inner{align-items:flex-start;flex-direction:column;gap:14px}section{padding:70px 0}}
     @media(max-width:500px){.brand-logo{width:110px;max-height:65px}.container{width:min(100% - 36px,1140px)}h1{font-size:clamp(5rem,19vw,7.5rem)}.hero-title-small{font-size:1.38rem}.hero-details{gap:16px;flex-direction:column}.hero-inner{min-height:560px}.hero-art{width:min(78%,280px)}.navlinks .nav-pill{font-size:.77rem;padding:8px 12px}.update-panel{padding:26px}.footer-links{gap:14px}}
     @media(max-width:900px){.hero-inner{width:min(1140px,calc(100% - 48px));grid-template-columns:1fr;gap:28px;padding:70px 0 68px;min-height:0}.hero-primary-logo{max-width:430px}.hero-photo{width:min(100%,570px);max-width:570px}.hero-photo img{height:350px}.hero-copy{max-width:700px;order:1;transform:none}.hero-photo{order:2}}
     @media(max-width:500px){.hero-primary-logo{max-width:320px;margin:24px 0 28px}.hero-photo img{height:260px}.hero-photo figcaption{font-size:.73rem;padding:25px 14px 12px}}
@@ -118,13 +118,24 @@
     <section id="dates" class="section-alt">
       <div class="container">
         <div class="section-tag">02 / Key milestones</div><h2>Important dates</h2>
-        <p style="max-width:650px;color:#66727d;margin:0">The conference dates are confirmed. Submission and registration deadlines will be published once finalised.</p>
+        <p style="max-width:690px;color:#66727d;margin:0">The conference dates are confirmed. The following paper-related deadlines are tentative and subject to confirmation. All paper deadlines are Anywhere on Earth (AoE).</p>
         <div class="cards">
-          <div class="card"><div class="num">01 / SUBMISSIONS</div><h3>Call for Papers</h3><p>Dates to be announced</p></div>
-          <div class="card"><div class="num">02 / PARTICIPATION</div><h3>Registration</h3><p>Opening date to be announced</p></div>
-          <div class="card"><div class="num">03 / CONFERENCE</div><h3>ISMIR 2027</h3><p><strong style="color:var(--ink)">12–16 September 2027</strong><br>London, United Kingdom</p></div>
+          <div class="card"><div class="num">01 / SUBMISSIONS</div><h3>Paper Submissions</h3>
+            <div class="date-lines">
+              <div class="date-line"><span>Abstract</span><strong>9 March 2027</strong></div>
+              <div class="date-line"><span>Full paper</span><strong>16 March 2027</strong></div>
+            </div>
+          </div>
+          <div class="card"><div class="num">02 / PAPER DECISIONS</div><h3>Review &amp; Camera-Ready</h3>
+            <div class="date-lines">
+              <div class="date-line"><span>Notification to authors</span><strong>2 June 2027</strong></div>
+              <div class="date-line"><span>Camera-ready</span><strong>23 June 2027</strong></div>
+            </div>
+          </div>
+          <div class="card"><div class="num">03 / PARTICIPATION</div><h3>Registration</h3><p>Opening date to be announced</p></div>
+          <div class="card"><div class="num">04 / CONFERENCE</div><h3>ISMIR 2027</h3><p><strong style="color:var(--ink)">12–16 September 2027</strong><br>London, United Kingdom</p></div>
         </div>
-        <p class="note">All future submission deadlines will state their time zone explicitly.</p>
+        <p class="date-note">* Paper-related deadlines are tentative and may change. Dates are shown without weekdays pending confirmation.</p>
       </div>
     </section>
 
